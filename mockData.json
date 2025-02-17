@@ -1,0 +1,187 @@
+{
+  "id": "X58E9647",
+  "title": "300 Science",
+  "link": "https://www.classswift.viewsonic.io/",
+  "students": [
+    {
+      "id": 1,
+      "name": "Philip",
+      "score": 2,
+      "isGuest": false
+    },
+    {
+      "id": 2,
+      "name": "Darrell",
+      "score": 5,
+      "isGuest": false
+    },
+    {
+      "id": 3,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 4,
+      "name": "Cody",
+      "score": 9,
+      "isGuest": false
+    },
+    {
+      "id": 5,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 6,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 7,
+      "name": "Bessie",
+      "score": 0,
+      "isGuest": false
+    },
+    {
+      "id": 8,
+      "name": "Wendy",
+      "score": 3,
+      "isGuest": false
+    },
+    {
+      "id": 9,
+      "name": "Philip",
+      "score": 2,
+      "isGuest": false
+    },
+    {
+      "id": 10,
+      "name": "Darrell",
+      "score": 5,
+      "isGuest": false
+    },
+    {
+      "id": 11,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 12,
+      "name": "Cody",
+      "score": 9,
+      "isGuest": false
+    },
+    {
+      "id": 13,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 14,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 15,
+      "name": "Bessie",
+      "score": 0,
+      "isGuest": false
+    },
+    {
+      "id": 16,
+      "name": "Wendy",
+      "score": 3,
+      "isGuest": false
+    },
+    {
+      "id": 17,
+      "name": "Philip",
+      "score": 2,
+      "isGuest": false
+    },
+    {
+      "id": 18,
+      "name": "Darrell",
+      "score": 5,
+      "isGuest": false
+    },
+    {
+      "id": 19,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 20,
+      "name": "Cody",
+      "score": 9,
+      "isGuest": false
+    },
+    {
+      "id": 21,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 22,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 23,
+      "name": "Bessie",
+      "score": 0,
+      "isGuest": false
+    },
+    {
+      "id": 24,
+      "name": "Wendy",
+      "score": 3,
+      "isGuest": false
+    },
+    {
+      "id": 25,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 26,
+      "name": "Cody",
+      "score": 9,
+      "isGuest": false
+    },
+    {
+      "id": 27,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 28,
+      "name": "Guest",
+      "score": 0,
+      "isGuest": true
+    },
+    {
+      "id": 29,
+      "name": "Bessie",
+      "score": 0,
+      "isGuest": false
+    },
+    {
+      "id": 30,
+      "name": "Wendy",
+      "score": 3,
+      "isGuest": false
+    }
+  ]
+}
