@@ -54,6 +54,7 @@ const classInfoSlice = createSlice({
     setClassInfoData: (state, action: PayloadAction<ClassInfoResponse>) => {
       state.id = action.payload.id;
       state.link = action.payload.link;
+      state.title = action.payload.title;
       state.students = action.payload.students;
     },
     // 增加學生的分數
@@ -82,6 +83,7 @@ const classInfoSlice = createSlice({
         state.status = RequestStatus.Succeeded;
         state.id = action.payload.id;
         state.link = action.payload.link;
+        state.title = action.payload.title;
         state.students = action.payload.students;
       })
       .addCase(fetchClassInfoData.rejected, (state) => {
