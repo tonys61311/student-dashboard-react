@@ -42,7 +42,7 @@ const initialState: ClassInfoState = {
 export const fetchClassInfoData = createAsyncThunk(
   "classInfo/fetchClassInfo",
   async (): Promise<ClassInfoResponse> => {
-    return await fetchWithLog<ClassInfoResponse>("/mockData.json");
+    return await fetchWithLog<ClassInfoResponse>("/student-dashboard-react/mockData.json");
   }
 );
 
