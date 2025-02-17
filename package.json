@@ -2,6 +2,7 @@
   "name": "student-dashboard-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://tonys61311.github.io/student-dashboard-react",
   "type": "module",
   "scripts": {
     "dev": "vite",
