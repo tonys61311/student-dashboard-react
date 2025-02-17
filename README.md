@@ -2,7 +2,7 @@
 
 ## 程式設計概述
 
-本專案是一個基於 **Vite + React** 和 **Redux Toolkit** 開發的網頁，並使用 **Styled Components** 進行 UI 樣式管理。專案的核心功能包括QR Code 連結顯示、複製QR code連結、顯示/隱藏 Guest 學生、隨機分組、分數增減等。此外，專案透過 **GitHub Pages** 自動部署，並使用 **fetch API** 讀取本地假資料（`mockData.json`），模擬後端 API 回應。
+本專案是一個基於 **Vite + React** 和 **Redux Toolkit** 開發的網頁，並使用 **Styled Components** 進行 UI 樣式管理以及支援 RWD 以適應不同裝置的顯示需求。專案的核心功能包括QR Code 連結顯示、複製QR code連結、顯示/隱藏 Guest 學生、隨機分組、分數增減等。此外，專案透過 **GitHub Pages** 自動部署，並使用 **fetch API** 讀取本地假資料（`mockData.json`），模擬後端 API 回應。
 
 ## GitHub Pages 展示
 
