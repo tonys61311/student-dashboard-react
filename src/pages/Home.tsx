@@ -32,7 +32,7 @@ const DialogContainer = styled.div`
 // 左側 QR Code 彈窗 (佔 40%)
 const LeftPanel = styled.div`
   flex: 2;
-`;
+`; 
 
 // 右側 Tab 彈窗 (佔 60%)
 const RightPanel = styled.div`
