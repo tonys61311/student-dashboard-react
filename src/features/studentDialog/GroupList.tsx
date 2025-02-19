@@ -20,15 +20,6 @@ const RandomGroupTitle = styled.div`
   border-bottom: 2px solid #ccc;
 `;
 
-// 每個分組區塊
-const GroupBox = styled.div`
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  padding: 15px;
-  background: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-`;
-
 // 分組標題
 const GroupTitle = styled.h4`
   margin: 0;
@@ -48,21 +39,6 @@ const GroupMembers = styled.div`
   margin-top: 10px;
 `;
 
-// 成員卡片
-const Member = styled.div<{ $isGuest: boolean }>`
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: ${({ $isGuest }) => ($isGuest ? "#ddd" : "#007bff")};
-  color: ${({ $isGuest }) => ($isGuest ? "#666" : "white")};
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  justify-content: space-between;
-`;
-
 // ID 標籤
 const IDBadge = styled.span<{ $isGuest: boolean }>`
   display: flex;
@@ -77,6 +53,52 @@ const IDBadge = styled.span<{ $isGuest: boolean }>`
   color: white;
 `;
 
+// 成員卡片組件
+const MemberCard = styled.div<{ $isGuest: boolean }>`
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: ${({ $isGuest }) => ($isGuest ? "#ddd" : "#007bff")};
+  color: ${({ $isGuest }) => ($isGuest ? "#666" : "white")};
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+`;
+
+// ✅ Member 組件
+const Member = ({ student }: { student: Student }) => (
+  <MemberCard $isGuest={student.isGuest}>
+    <IDBadge $isGuest={student.isGuest}>
+      {student.id < 10 ? `0${student.id}` : student.id}
+    </IDBadge>
+    {student.name}
+  </MemberCard>
+);
+
+// ✅ GroupBox 組件
+const GroupBoxContainer = styled.div`
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+`;
+
+const GroupBox = ({ group, index }: { group: Student[]; index: number }) => (
+  <GroupBoxContainer>
+    <GroupTitle>Group {index + 1}</GroupTitle>
+    <GroupMembers>
+      {group.map((student) => (
+        <Member key={student.id} student={student} />
+      ))}
+    </GroupMembers>
+  </GroupBoxContainer>
+);
+
+// ✅ 隨機打亂學生順序
 const shuffleArray = (array: Student[]) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -87,7 +109,7 @@ const shuffleArray = (array: Student[]) => {
 };
 
 const GroupList = () => {
-  const {students} = useAppSelector(selectClassInfo);
+  const { students } = useAppSelector(selectClassInfo);
 
   // 讓分組只執行一次
   const groups = useMemo(() => {
@@ -102,21 +124,9 @@ const GroupList = () => {
 
   return (
     <GroupContainer>
-      {groups.length > 0 && <RandomGroupTitle> 隨機分組</RandomGroupTitle>}
+      {groups.length > 0 && <RandomGroupTitle>隨機分組</RandomGroupTitle>}
       {groups.map((group, idx) => (
-        <GroupBox key={idx}>
-          <GroupTitle>Group {idx + 1}</GroupTitle>
-          <GroupMembers>
-            {group.map((student) => (
-              <Member key={student.id} $isGuest={student.isGuest}>
-                <IDBadge $isGuest={student.isGuest}>
-                  {student.id < 10 ? `0${student.id}` : student.id}
-                </IDBadge>
-                {student.name}
-              </Member>
-            ))}
-          </GroupMembers>
-        </GroupBox>
+        <GroupBox key={idx} group={group} index={idx} />
       ))}
     </GroupContainer>
   );
