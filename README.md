@@ -79,7 +79,7 @@ src                             # 程式碼主目錄
 - `resetScores()`：重置所有學生分數
 - `toggleGuests()`：顯示/隱藏 Guest 學生
 
-#### 2. 首頁 (Home.tsx)
+#### 2. 功能首頁 (ClassroomPanel.tsx)
 - 使用 `useAppDispatch` 觸發 `fetchClassInfoData()` 讀取學生資料
 - 依據 `RequestStatus` 對應顯示 `Loading` 畫面、 `ErrorScreen` 畫面 或 `QRCodeDialog` 與 `StudentDialog` 彈窗
 
