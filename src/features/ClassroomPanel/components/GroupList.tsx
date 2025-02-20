@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { useAppSelector } from "@/store/hooks";
-import { selectClassInfo, Student } from "@/store/slices/classInfoSlice";
+import { useAppSelector } from "@/common/hooks/hooks";
+import { selectClassInfo, Student } from "@/common/slices/classInfoSlice";
 import { useMemo } from "react";
 
 // 分組容器

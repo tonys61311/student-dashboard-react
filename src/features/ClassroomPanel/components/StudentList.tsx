@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import StudentCard from "@/components/StudentCard";
-import { useAppSelector } from "@/store/hooks";
-import { selectClassInfo } from "@/store/slices/classInfoSlice";
+import StudentCard from "@/features/ClassroomPanel/components/StudentCard";
+import { useAppSelector } from "@/common/hooks/hooks";
+import { selectClassInfo } from "@/common/slices/classInfoSlice";
 import { useState, useEffect } from "react";
 
 const StudentGrid = styled.div`

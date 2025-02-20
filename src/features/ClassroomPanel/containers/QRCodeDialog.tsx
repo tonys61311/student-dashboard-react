@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import Dialog from "@/components/Dialog";
+import Dialog from "@/common/components/Dialog";
 import QRCode from "react-qr-code";
 import styled from "styled-components";
-import CopyButton from "@/components/CopyButton";
-import { useAppSelector } from "@/store/hooks";
-import { selectClassInfo } from "@/store/slices/classInfoSlice";
+import CopyButton from "@/common/components/CopyButton";
+import { useAppSelector } from "@/common/hooks/hooks";
+import { selectClassInfo } from "@/common/slices/classInfoSlice";
 
 const DialogContainer = styled.div`
   height: 100%;

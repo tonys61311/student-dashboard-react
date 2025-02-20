@@ -1,8 +1,8 @@
-import Dialog from "@/components/Dialog";
-import Tabs from "@/components/Tabs";
+import Dialog from "@/common/components/Dialog";
+import Tabs from "@/features/ClassroomPanel/components/Tabs";
 import styled from "styled-components";
-import { useAppSelector } from "@/store/hooks";
-import { selectClassInfo } from "@/store/slices/classInfoSlice";
+import { useAppSelector } from "@/common/hooks/hooks";
+import { selectClassInfo } from "@/common/slices/classInfoSlice";
 import { FiUser } from "react-icons/fi";
 
 const DialogContainer = styled.div`

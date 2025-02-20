@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { useAppDispatch } from "@/store/hooks";
-import { incrementScore, decrementScore } from "@/store/slices/classInfoSlice";
+import { useAppDispatch } from "@/common/hooks/hooks";
+import { incrementScore, decrementScore } from "@/common/slices/classInfoSlice";
 
 const Card = styled.div<{ $isGuest: boolean }>`
   width: 100px;

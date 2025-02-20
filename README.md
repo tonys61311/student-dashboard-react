@@ -18,37 +18,41 @@ public                          # 靜態資源
 
 src                             # 程式碼主目錄
 ├── assets                      # 靜態資源，如圖示或樣式文件
-├── components                  # 可重複使用的 UI 元件
+├── common                      # 通用 UI 元件
 │   ├── CopyButton.tsx          # 複製按鈕元件
-│   ├── Dialog.tsx              # 對話框元件
+│   ├── Dialog.tsx              # 通用對話框元件
 │   ├── ErrorScreen.tsx         # 錯誤畫面顯示元件
-│   ├── Loading.tsx             # 載入畫面顯示元件
-│   ├── MoreButton.tsx          # 更多選單按鈕
-│   ├── MoreMenu.tsx            # 更多選單內容
-│   ├── StudentCard.tsx         # 學生資訊卡片
-│   ├── Tabs.tsx                # 分頁標籤元件
-│── features                    # 各功能區域
-│   ├── QRCodeDialog
-│   │   └── index.tsx           # QR Code 彈窗元件
-│   └── studentDialog
-│       ├── GroupList.tsx       # 學生分組列表
-│       ├── index.tsx           # 學生對話框主要元件
-│       └── StudentList.tsx     # 學生列表顯示元件
-├── pages
-│   └── Home.tsx                # 首頁元件
-├── store                       # 狀態管理 (Redux)
-│   ├── slices
-│   │   └── classInfoSlice.ts   # 學生班級資訊的狀態管理
-│   ├── hooks.ts                # Redux 自訂 hooks
-│   ├── index.ts                # Redux store 設定
-├── styles
-│   └── GlobalStyle.ts          # 全域樣式設定
-├── types
+│   └── Loading.tsx             # 載入畫面顯示元件
+├── hooks                       # 自訂 hooks
+│   └── hooks.ts                # Redux hooks
+├── slices                      # 狀態管理 (Redux)
+│   ├── classInfoSlice.ts       # 學生班級資訊的狀態管理
+│   └── store.ts                # Redux store 設定
+├── styles                      # 樣式管理
+│   ├── GlobalStyle.ts          # 全域樣式設定
+│   └── theme.ts                # 主題設定
+├── types                       # TypeScript 類型
 │   └── RequestStatus.ts        # API 請求狀態類型
-├── utils
+├── utils                       # 工具函式
 │   └── fetchWithLog.ts         # 包裝 fetch 並記錄請求資訊
+├── features
+│   └── ClassroomPanel          # 主要功能區 (ClassroomPanel 模組)
+│      ├── components              # ClassroomPanel 內部 UI 元件
+│      │   ├── GroupList.tsx       # 學生分組列表
+│      │   ├── MoreButton.tsx      # 更多選單按鈕
+│      │   ├── MoreMenu.tsx        # 更多選單內容
+│      │   ├── StudentCard.tsx     # 學生資訊卡片
+│      │   ├── StudentList.tsx     # 學生列表顯示元件
+│      │   └── Tabs.tsx            # 學生管理分頁標籤
+│      ├── containers              # ClassroomPanel 主要容器
+│      │   ├── QRCodeDialog.tsx    # QR Code 彈窗元件
+│      │   └── StudentDialog.tsx   # 學生管理對話框
+│      └── index.tsx               # ClassroomPanel 主要畫面
 ├── App.css                     # 全域 CSS 樣式
-└── App.tsx                     # React 主要應用程式入口
+├── App.tsx                     # React 主要應用程式入口
+├── index.css                   # 頁面樣式
+├── main.tsx                    # 應用程式的主入口
+└── vite-env.d.ts               # Vite 環境變數定義
 ```
 
 ### 核心技術與架構

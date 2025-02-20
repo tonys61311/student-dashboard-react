@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import MoreButton from "./MoreButton";
-import StudentList from "@/features/studentDialog/StudentList";
-import GroupList from "@/features/studentDialog/GroupList";
-import { useAppDispatch } from "@/store/hooks";
-import { resetScores, toggleGuests } from "@/store/slices/classInfoSlice";
+import MoreButton from "../../ClassroomPanel/components/MoreButton";
+import StudentList from "@/features/ClassroomPanel/components/StudentList";
+import GroupList from "@/features/ClassroomPanel/components/GroupList";
+import { useAppDispatch } from "@/common/hooks/hooks";
+import { resetScores, toggleGuests } from "@/common/slices/classInfoSlice";
 
 const TabsContainer = styled.div`
   display: flex;

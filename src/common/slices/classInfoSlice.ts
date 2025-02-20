@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { fetchWithLog } from "@/utils/fetchWithLog";
-import { RequestStatus } from "@/types/RequestStatus";
-import { RootState } from "../";
+import { fetchWithLog } from "@/common/utils/fetchWithLog";
+import { RequestStatus } from "@/common/types/RequestStatus";
+import { RootState } from "./store";
 
 // API 回應的類型
 export interface Student {
